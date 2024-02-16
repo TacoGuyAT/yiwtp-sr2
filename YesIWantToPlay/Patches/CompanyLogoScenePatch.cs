@@ -15,7 +15,7 @@ public class CompanyLogoScenePatch {
         if (prompt == null)
         {
             return;
-        } 
+        }
         prompt.EngagementPromptTextUI.SetActive(false);
         var actions = prompt.SubmitAction.action.m_OnPerformed;
         // There should be only one action, but just in case...
