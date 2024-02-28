@@ -12,10 +12,7 @@ public class CompanyLogoScenePatch {
     [HarmonyPatch("OnMainMenuLoaded")]
     static void OnMainMenuLoaded_Postfix() {
         var prompt = UnityEngine.Object.FindObjectOfType<PlatformEngagementPrompt>();
-        if (prompt == null)
-        {
-            return;
-        }
+        if (prompt == null) return;
         prompt.EngagementPromptTextUI.SetActive(false);
         var actions = prompt.SubmitAction.action.m_OnPerformed;
         // There should be only one action, but just in case...
